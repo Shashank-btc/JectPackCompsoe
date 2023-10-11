@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyFirstKotlinProject</string>
+    <string name="title_activity_empty_cpmpose">EmptyCpmpose</string>
+</resources>
