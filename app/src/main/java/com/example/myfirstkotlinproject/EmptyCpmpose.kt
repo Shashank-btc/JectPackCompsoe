@@ -33,16 +33,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.myfirstkotlinproject.ui.theme.MyFirstKotlinProjectTheme
-import java.nio.file.WatchEvent
 
 class EmptyCpmpose : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val fontFamily = FontFamily(
+            Font(R.font.youngserif_begular, FontWeight.Thin)
+        )
         // Row and colums
 //        setContent {
 //            Column(Modifier
@@ -107,67 +116,111 @@ class EmptyCpmpose : ComponentActivity() {
 
         // create UI
 
+//        setContent {
+//            val painter = painterResource(id = R.drawable.snowman)
+//            val desc = "snow india image here"
+//            val title = "india snow"
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxWidth(0.5f)
+//                    .padding(16.dp)
+//            ) {
+//                ImageCard(painter = painter, contentDesc = desc, title = title)
+//            }
+//        }
+//        Text(
+//            "Jectpack Compose",
+//            color = Color.White,
+//            fontSize = 30.dp,
+//            fontFamily = fontFamily)
+
+        // font styles and style text
         setContent {
-            val painter = painterResource(id = R.drawable.snowman)
-            val desc = "snow india image here"
-            val title = "india snow"
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(0.5f)
-                    .padding(16.dp)
-            ) {
-                ImageCard(painter = painter, contentDesc = desc, title = title)
+            Box(modifier = Modifier
+                .fillMaxSize()
+                .background(color = Color(0xFF101010))
+                ) {
+                Text(
+                    buildAnnotatedString {
+                                         withStyle(
+                                             style = SpanStyle(
+                                                 color = Color.Blue,
+                                                 fontSize = 40.sp,
+                                             )
+                                         ){
+                                             append("J")
+                                         }
+                        append("ectpack ")
+                        withStyle(
+                            style = SpanStyle(
+                                color = Color.Blue,
+                                fontSize = 40.sp,
+                            )
+                        ){
+                            append("C")
+                        }
+                        append("ompose")
+                    },
+                    color = Color.White,
+                    fontSize = 30.sp,
+                    fontStyle = FontStyle.Italic,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.End,
+                    fontFamily = fontFamily,
+                textDecoration = TextDecoration.Underline)
             }
         }
     }
 }
 
-@Composable
-fun ImageCard(
-    painter: Painter,
-    contentDesc: String,
-    title: String,
-    modifier: Modifier = Modifier
-) {
-    Card(
-        modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(15.dp),
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 5.dp
-        )
-    ) {
-        Box(
-            modifier = Modifier
-                .height(200.dp)
-                .fillMaxWidth()
-        ) {
-            Image(
-                painter = painter,
-                contentDescription = contentDesc,
-                contentScale = ContentScale.FillBounds
-            )
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        brush = Brush.verticalGradient(
-                            colors = listOf(
-                                Color.Transparent,
-                                Color.Black,
-                            ),
-                            startY = 450f
-                        )
-                    )
-            )
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(12.dp),
-                contentAlignment = Alignment.BottomStart
-            ) {
-                Text(title, style = TextStyle(color = Color.White, fontSize = 16.sp))
-            }
-        }
-    }
-}
+//@Composable
+//fun ImageCard(
+//    painter: Painter,
+//    contentDesc: String,
+//    title: String,
+//    modifier: Modifier = Modifier
+//) {
+//    Card(
+//        modifier = modifier.fillMaxWidth(),
+//        shape = RoundedCornerShape(15.dp),
+//        elevation = CardDefaults.cardElevation(
+//            defaultElevation = 5.dp
+//        )
+//    ) {
+//        Box(
+//            modifier = Modifier
+//                .height(200.dp)
+//                .fillMaxWidth()
+//        ) {
+//            Image(
+//                painter = painter,
+//                contentDescription = contentDesc,
+//                contentScale = ContentScale.FillBounds
+//            )
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .background(
+//                        brush = Brush.verticalGradient(
+//                            colors = listOf(
+//                                Color.Transparent,
+//                                Color.Black,
+//                            ),
+//                            startY = 450f
+//                        )
+//                    )
+//            )
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .padding(12.dp),
+//                contentAlignment = Alignment.BottomStart
+//            ) {
+//                Text(title, style = TextStyle(color = Color.White, fontSize = 16.sp))
+//            }
+//        }
+//    }
+//}
+
+
 

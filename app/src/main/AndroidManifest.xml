@@ -13,12 +13,22 @@
         android:theme="@style/Theme.MyFirstKotlinProject"
         tools:targetApi="31">
         <activity
+            android:name=".CompseActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_snackbars"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".EmptyCpmpose"
+            android:exported="false"
+            android:label="@string/title_activity_compse2"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_empty_cpmpose"
             android:theme="@style/Theme.MyFirstKotlinProject" />
         <activity
-            android:name=".EmptyCpmpose"
+            android:name=".Snackbars"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
