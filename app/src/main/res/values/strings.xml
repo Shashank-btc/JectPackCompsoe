@@ -3,4 +3,5 @@
     <string name="title_activity_empty_cpmpose">EmptyCpmpose</string>
     <string name="title_activity_compse2">CompseActivity2</string>
     <string name="title_activity_snackbars">Snackbars</string>
+    <string name="title_activity_list_items">ListItems</string>
 </resources>
