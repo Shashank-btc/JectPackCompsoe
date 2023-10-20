@@ -13,4 +13,5 @@
     <string name="title_activity_state_hosting">StateHosting</string>
     <string name="title_activity_disposable_effect">DisposableEffect</string>
     <string name="title_activity_sample_app">SampleApp</string>
+    <string name="title_activity_theams_screen">TheamsScreen</string>
 </resources>
