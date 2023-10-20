@@ -4,4 +4,13 @@
     <string name="title_activity_compse2">CompseActivity2</string>
     <string name="title_activity_snackbars">Snackbars</string>
     <string name="title_activity_list_items">ListItems</string>
+    <string name="title_activity_constraint_layout">ConstraintLayout</string>
+    <string name="title_activity_effect_handlers">EffectHandlers</string>
+    <string name="title_activity_animations">Animations</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_recomposables">Recomposables</string>
+    <string name="title_activity_state_example">StateExample</string>
+    <string name="title_activity_state_hosting">StateHosting</string>
+    <string name="title_activity_disposable_effect">DisposableEffect</string>
+    <string name="title_activity_sample_app">SampleApp</string>
 </resources>

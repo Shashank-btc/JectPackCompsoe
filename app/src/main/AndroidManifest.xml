@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstKotlinProject"
         tools:targetApi="31">
+        <activity
+            android:name=".SampleApp"
+            android:exported="false"
+            android:label="@string/title_activity_sample_app"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".DisposableEffect"
+            android:exported="false"
+            android:label="@string/title_activity_disposable_effect"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".StateExample"
+            android:exported="false"
+            android:label="@string/title_activity_state_hosting"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".Recomposables"
+            android:exported="false"
+            android:label="@string/title_activity_state_example"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".ListItems"
+            android:exported="false"
+            android:label="@string/title_activity_recomposables"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".Animations"
+            android:exported="false"
+            android:label="@string/title_activity_animations"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".ConstraintLayout"
+            android:exported="false"
+            android:label="@string/title_activity_effect_handlers"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
+        <activity
+            android:name=".EffectHandlers"
+            android:exported="false"
+            android:label="@string/title_activity_constraint_layout"
+            android:theme="@style/Theme.MyFirstKotlinProject" />
         <activity
             android:name=".Snackbars"
             android:exported="false"
@@ -28,12 +76,12 @@
             android:label="@string/title_activity_compse2"
             android:theme="@style/Theme.MyFirstKotlinProject" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StateHosting"
             android:exported="false"
             android:label="@string/title_activity_empty_cpmpose"
             android:theme="@style/Theme.MyFirstKotlinProject" />
         <activity
-            android:name=".ListItems"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
