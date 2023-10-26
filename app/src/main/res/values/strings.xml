@@ -14,4 +14,9 @@
     <string name="title_activity_disposable_effect">DisposableEffect</string>
     <string name="title_activity_sample_app">SampleApp</string>
     <string name="title_activity_theams_screen">TheamsScreen</string>
+    <string name="title_activity_side_effect1">SideEffect1</string>
+    <string name="title_activity_remenber_scope">RemenberScope</string>
+    <string name="title_activity_remeber_state_corotin_scope">RemeberStateCorotinScope</string>
+    <string name="title_activity_remenber_update_state">RemenberUpdateState</string>
+    <string name="title_activity_remember_update_state">RememberUpdateState</string>
 </resources>
